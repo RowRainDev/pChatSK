@@ -1,0 +1,37 @@
+#         ✨Use Your Imagination. There will be an editor in your local file, create roles there.
+#                     The website and simple skript were developed by RowRain.
+#                          You can use things like PAPI with extra plugins.
+#---------------------------------------------------------------------------------------------------------
+command /pChat:
+    permission: op
+    permission message: &4&lPCHAT &8&l» &cYour permit was not found.
+    trigger:
+        execute player command "sk reload pChatControl"
+        send "&8------------------------------------------"
+        send "&4&lPCHAT &8&l» &aSkript has been successfully renewed!"
+        send "&8------------------------------------------"
+#-----------------------------------------------------------------------------------------------------------
+# Default:
+options:
+    Defualt-ChatColor: &a
+    Defualt-sendicon: &7»
+    Defualt-nickname: &7[ &e%player% &7]  
+    Defualt-Prefix: &a&lPLAYER
+
+on chat:
+    if player's group is "defualt":
+        broadcast "{@Defualt-Prefix} {@Defualt-nickname} {@Defualt-sendicon} {@Defualt-ChatColor}%message%"
+        cancel event       
+    else:
+        send "no"    
+#-----------------------------------------------------------------------------------------------------------
+#                                Please write your own groups here:
+#</> Intermediate section 💬
+
+
+
+
+
+#</> Intermediate section 💬
+#                                Please write your own groups here:
+#-----------------------------------------------------------------------------------------------------------
